@@ -1,0 +1,112 @@
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexRow {
+    display: flex;
+}
+
+p{
+    font-weight: bold;
+}
+
+.dataOutput{
+    font-weight:normal;
+    margin-left: .25rem;
+}
+
+h2{
+    font-size: 1.5em;
+    font-weight: bold;
+    justify-content: center;
+}
+
+
+.mainContainer{
+    height: 100vh;
+    min-width: 40rem;
+    display: flex;
+    flex-direction: row;
+    /*border: 1px solid orange;*/
+    background: #F2F2F2;
+
+}
+
+.backButtonAndImageWrapper {
+    display: flex;
+    flex-direction: column; /* stack the back button above the image */
+    align-items: flex-start; /* align to the start */
+    justify-content: center; /* vertically center */
+    flex: 1; /* take up half the space */
+}
+
+.cardDetailWrapper{
+    flex: 1; /* take up half the space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically center the contents */
+    /*border: 1px solid blue;*/
+}
+
+.cardDetailBody{
+    /*border: 1px solid red;*/
+    margin-top: 2rem;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+   gap: 2rem;
+
+}
+
+.gridFlow{
+    display: grid;
+    gap: .15rem;
+}
+
+.mainText{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+
+}
+
+.rightMainText{
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction:column;
+    gap: .5rem;
+
+}
+
+.leftMainText{
+    display: flex;
+    flex-direction:column;
+    gap: .5rem;
+}
+
+.bottomText{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.navLink,.navLink:link, .navLink:visited{
+    color: inherit; /* or any desired color */
+    text-decoration: none;
+    padding: .25rem 2rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+
+}
+
+.navLinkWrapper{
+    margin-bottom: 4rem;
+}
+
+.borders{
+    /*border: 1px solid blue;*/
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    padding: .1rem;
+    margin: 0 .18rem;
+    font-weight: normal;
+}

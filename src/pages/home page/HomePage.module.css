@@ -1,0 +1,25 @@
+.searchFilter{
+    /*border: 2px solid green;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem 4rem ;
+}
+
+
+
+main{
+    padding: 2rem 4rem ;
+    /*border: 2px solid red;*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-around;
+}
+
+.navLink,.navLink:link, .navLink:visited{
+    color: inherit; /* or any desired color */
+    text-decoration: none;
+}
+
+

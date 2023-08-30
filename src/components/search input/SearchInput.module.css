@@ -1,0 +1,23 @@
+
+
+input[type="text"]{
+    padding: .5rem 3rem;
+    width: 24rem;
+    border: 0;
+}
+
+input[type='text']:focus {
+    outline: none;
+    border: 1px solid var(--dark-gray);
+}
+
+.inputWrapper{
+    position: relative;
+}
+
+.inputWrapper span{
+    position: absolute;
+    top:25%;
+    left:10px;
+}
+
