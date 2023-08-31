@@ -5,26 +5,34 @@
   --very-dark-blue-darkmode: hsl(207, 26%, 17%);
   --very-dark-blue-lightmode: hsl(200, 15%, 8%);
   --dark-gray: hsl(0, 0%, 52%);
-  --very-light-gray: hsl(0, 0%, 98%);
+  --very-light-gray: #F2F2F2;
   --white: hsl(0, 0%, 100%);
+
+  /* light mode */
+  --background-light: var(--very-light-gray);
+  --text-color-light: var(--very-dark-blue-lightmode);
+
+  /* dark mode */
+  --background-dark: var(--dark-blue);
+  --text-color-dark: var(--white);
+
+  /* default values */
+  --current-background-color: var(--background-light);
+  --current-text-color: var(--text-color-light);
 
   --font-family-nunito:'Nunito Sans',sans-serif;
   --fs-homepage:0.9rem;
   --fs-detailpage:1rem;
 }
 
-.forLightTheme{
-  --primary-color:hsl(200, 15%, 8%);
-  --bg-color:#F2F2F2 ;
-  --header-color:#FFFFFF;
-}
-
-.forDarkTheme{
-  --primary-color:hsl(0, 0%, 100%);
-  --bg-color:hsl(207, 26%, 17%);
-  --heading-color:hsl(209, 23%, 22%);
+body{
+  font-family: var(--font-family-nunito);
+  font-size: var(--fs-homepage);
+  background: var(--current-background-color);
+  /*color: var(--current-text-color);*/
 
 }
+
 
 p{
   font-weight: lighter;
@@ -48,8 +56,6 @@ svg {
   height: auto;
 }
 
-body{
-  font-family: var(--font-family-nunito);
-  font-size: var(--fs-homepage);
-  background:#F2F2F2 ;
-}
+
+
+

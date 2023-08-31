@@ -5,10 +5,12 @@ import FlagCard from "../../components/flag card/FlagCard.jsx";
 import data from "/src/data/data.json";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-
+import Header from "../../components/header/Header.jsx";
 const HomePage = () => {
   const [search, setSearch] = useState("");
   const [select, setSelect] = useState("filter");
+
+  //1 step for context
 
   const handleChange = (eventTargetValueFromChildComponentSearchComponent) => {
     setSearch(eventTargetValueFromChildComponentSearchComponent);
@@ -19,7 +21,9 @@ const HomePage = () => {
   };
 
   return (
+    //2 Provide value to  child components
     <>
+      <Header />
       <div className={styles.searchFilter}>
         <SearchInput search={search} setSearch={handleChange} />
         <FilterDropdown select={select} handleSelect={handleSelect} />

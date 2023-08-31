@@ -5,14 +5,12 @@ import data from "/src/data/data.json";
 import { useEffect, useState } from "react";
 import { faArrowAltCircleLeft } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Header from "../header/Header.jsx";
 
 const FlagCardDetails = () => {
-  // const params = useParams();
   const [flagDetails, setFlagDetails] = useState(null);
   const { id } = useParams();
-  // console.log(data);
-  // console.log(params.id);
-  // const flagDetails = data.find((countryName) => countryName.name === id);
+
   useEffect(() => {
     const details = data.find((countryName) => countryName.name === id);
     setFlagDetails(details);
@@ -42,6 +40,7 @@ const FlagCardDetails = () => {
 
   return (
     <>
+      <Header />
       <main className={`${styles.mainContainer}`}>
         <div className={styles.backButtonAndImageWrapper}>
           <span className={styles.navLinkWrapper}>
