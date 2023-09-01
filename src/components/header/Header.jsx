@@ -48,7 +48,11 @@ const Header = () => {
         <p className={styles.leftText}>Where in the world?</p>
         <button onClick={handleTheme} className={styles.headerRight}>
           <FontAwesomeIcon icon={theme === "light" ? faMoon : faSun} />
-          <p className={[styles.rightText, isThemeDark && styles.whiteText]}>
+          <p
+            className={`${styles.rightText} ${
+              isThemeDark ? styles.whiteText : ""
+            }`}
+          >
             {!isThemeDark ? "Dark Mode" : "Light Mode"}
           </p>
         </button>
