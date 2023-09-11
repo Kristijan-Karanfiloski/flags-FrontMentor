@@ -39,3 +39,16 @@
 .whiteText{
     color: white
 }
+
+
+@media (max-width:599px) {
+
+    .header{
+        padding:1rem 1.5rem;
+    }
+
+    .darkHeader{
+        padding:1rem 1.5rem;
+    }
+
+}

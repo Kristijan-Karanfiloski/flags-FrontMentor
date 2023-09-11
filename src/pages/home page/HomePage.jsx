@@ -6,9 +6,12 @@ import data from "/src/data/data.json";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Header from "../../components/header/Header.jsx";
+import { useSelector } from "react-redux";
 const HomePage = () => {
   const [search, setSearch] = useState("");
   const [select, setSelect] = useState("filter");
+
+  const theme = useSelector((state) => state.themePickerSlice.value);
 
   //1 step for context
 
@@ -22,7 +25,13 @@ const HomePage = () => {
 
   return (
     //2 Provide value to  child components
-    <>
+    <div
+      className={
+        theme === "light"
+          ? styles.homePageWrapperLight
+          : styles.homePageWrapperDark
+      }
+    >
       <Header />
       <div className={styles.searchFilter}>
         <SearchInput search={search} setSearch={handleChange} />
@@ -61,7 +70,7 @@ const HomePage = () => {
         {/*    <FlagCard data={data} key={i} />*/}
         {/*  ))}*/}
       </main>
-    </>
+    </div>
   );
 };
 

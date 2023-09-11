@@ -4,6 +4,8 @@ const initialState = {
   value: "light",
 };
 
+console.log("FROM THE SLICE :", initialState.value);
+
 export const themePickerSlice = createSlice({
   name: "theme",
   initialState,

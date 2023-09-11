@@ -6,6 +6,13 @@
     padding: 2rem 4rem ;
 }
 
+.homePageWrapperLight{
+    background:#F2F2F2;
+}
+.homePageWrapperDark{
+    background: var(--dark-blue);
+}
+
 
 
 main{
@@ -23,3 +30,12 @@ main{
 }
 
 
+@media (max-width: 599px){
+    .searchFilter{
+        padding: 1rem 1rem ;
+    }
+
+    /*main{*/
+    /*    padding: 0rem;*/
+    /*}*/
+}

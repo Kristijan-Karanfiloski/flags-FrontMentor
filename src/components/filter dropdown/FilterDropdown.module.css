@@ -5,3 +5,9 @@
     border-radius: 5px;
 }
 
+@media (max-width: 599px){
+    .select{
+       width: 100%;
+        margin-top: 1rem;
+    }
+}

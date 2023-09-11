@@ -6,10 +6,12 @@ import { useEffect, useState } from "react";
 import { faArrowAltCircleLeft } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../header/Header.jsx";
+import { useSelector } from "react-redux";
 
 const FlagCardDetails = () => {
   const [flagDetails, setFlagDetails] = useState(null);
   const { id } = useParams();
+  const theme = useSelector((state) => state.themePickerSlice.value);
 
   useEffect(() => {
     const details = data.find((countryName) => countryName.name === id);
@@ -30,9 +32,9 @@ const FlagCardDetails = () => {
 
   const borderNamesList = flagDetails.borders
     ? getBorderingCountries(flagDetails.borders, data).map((name) => (
-        <span className={styles.borders} key={name}>
+        <li className={styles.listItem} key={name}>
           {name}
-        </span>
+        </li>
       ))
     : "No Borders";
 
@@ -41,12 +43,18 @@ const FlagCardDetails = () => {
   return (
     <>
       <Header />
-      <main className={`${styles.mainContainer}`}>
+      <main
+        className={
+          theme === "light"
+            ? styles.mainContainerLight
+            : styles.mainContainerDark
+        }
+      >
         <div className={styles.backButtonAndImageWrapper}>
           <span className={styles.navLinkWrapper}>
             <NavLink className={styles.navLink} to="/">
               <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-              Back
+              <span className={styles.back}>Back</span>
             </NavLink>
           </span>
           <div className={styles.imgWrapper}>
@@ -119,10 +127,14 @@ const FlagCardDetails = () => {
               </div>
             </div>
             <div className={styles.bottomText}>
-              <p>
-                Borders countries:{" "}
-                <span className={styles.borders}> {borderNamesList}</span>
-              </p>
+              <ul className={styles.listBorderCountries}>
+                <p className={styles.listBorderCountiesTitle}>
+                  Borders countries:{" "}
+                </p>
+                <div className={styles.list}>{borderNamesList}</div>
+              </ul>
+              {/*<div className={styles.bordersItem}>{borderNamesList}</div>*/}
+
               {/*{!flagDetails.borders*/}
               {/*  ? "No Borders"*/}
               {/*  : flagDetails.borders.map((bord) => {*/}

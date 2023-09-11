@@ -1,7 +1,7 @@
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./SearchInput.module.css";
-import { Link } from "react-router-dom";
+
 const SearchInput = ({ search, setSearch }) => {
   // const handleChange = (value) => {
   //   setSearch(value);

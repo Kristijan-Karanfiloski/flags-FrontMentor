@@ -28,9 +28,7 @@
 body{
   font-family: var(--font-family-nunito);
   font-size: var(--fs-homepage);
-  background: var(--current-background-color);
-  /*color: var(--current-text-color);*/
-
+  height: 100vh;
 }
 
 

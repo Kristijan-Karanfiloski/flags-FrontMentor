@@ -9,7 +9,7 @@
 }
 
 p{
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .dataOutput{
@@ -18,21 +18,30 @@ p{
 }
 
 h2{
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 600;
     justify-content: center;
 }
 
 
-.mainContainer{
+.mainContainerLight{
     height: 100vh;
-    min-width: 40rem;
+   /*width: 100%;*/
     display: flex;
-    flex-direction: row;
+    /*flex-direction: column;*/
     /*border: 1px solid orange;*/
     background: #F2F2F2;
-
 }
+
+.mainContainerDark{
+    height: 100vh;
+    /*width: 100%;*/
+    display: flex;
+    /*flex-direction: column;*/
+    background: var(--dark-blue);
+    color: white;
+}
+
 
 .backButtonAndImageWrapper {
     display: flex;
@@ -86,10 +95,7 @@ h2{
     gap: .5rem;
 }
 
-.bottomText{
-    display: flex;
-    flex-wrap:wrap;
-}
+
 
 .navLink,.navLink:link, .navLink:visited{
     color: inherit; /* or any desired color */
@@ -103,10 +109,110 @@ h2{
     margin-bottom: 4rem;
 }
 
-.borders{
+.bottomText{
+    margin-top: 4rem;
+}
+
+.listBorderCountries{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+.listBorderCountiesTitle{
+    font-weight: 600;
+    margin-right: 1em;
+}
+
+.list{
+    display: flex;
+    flex-wrap:wrap;
+
+}
+
+.listItem{
+    box-shadow: 0 0 5px var(--dark-gray);
+    text-align: center;
+    min-width: 7em;
+    margin:0.5em;
+    padding: 0.25em;
+    border-radius: 5px;
+}
+
+.bordersItem{
     /*border: 1px solid blue;*/
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
     padding: .1rem;
     margin: 0 .18rem;
     font-weight: normal;
+}
+
+.imgWrapper img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 599px) {
+    .mainContainerLight{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    .mainContainerDark{
+        display: flex;
+        flex-direction: column;
+    }
+
+  .back{
+      margin-left: .5rem;
+  }
+    p{
+        font-weight: 600;
+    }
+
+    h2{
+        justify-content: start;
+    }
+
+
+    .cardDetailBody{
+        /*border: 1px solid red;*/
+        margin-top: 0;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .mainText{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .dataOutput{
+        margin-left: 0.25rem;
+        font-weight: 400;
+    }
+
+    .rightMainText{
+        margin-top: 1.5rem;
+    }
+    .listBorderCountries{
+        padding: 0;
+    }
+
+    .list{
+        display: flex;
+    };
+
+    .imgWrapper img{
+        display: block;
+        max-width: 100%;
+        /*height: auto;*/
+    }
 }

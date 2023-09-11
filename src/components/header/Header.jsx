@@ -1,10 +1,10 @@
-import { faMoon } from "@fortawesome/free-regular-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Header.module.css";
-import { createContext, useState } from "react";
+import { createContext } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme as toggleThemeAction } from "../../redux/themePickerSlice.js";
-import { faSun } from "@fortawesome/free-solid-svg-icons";
+// import { faSun } from "@fortawesome/free-solid-svg-icons";
 
 export const ThemeContext = createContext(null);
 
@@ -16,7 +16,7 @@ const Header = () => {
   const dispatch = useDispatch();
 
   console.log(theme);
-  console.log(dispatch);
+  // console.log(dispatch);
   // const { theme, themeLoaded } = useTheme();
   // const [selectedTheme, setSelectedTheme] = useState(theme);
   // const [isFakeDark, setIsFakeDark] = useState(false);
